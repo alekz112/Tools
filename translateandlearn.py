@@ -53,7 +53,7 @@ def word_count_dict(filename, dictList=de50):
     
     count = {}
     txt = open(filename, 'r').read().lower()
-    txt = re.sub('[,.!?":;()]', '', txt)
+    txt = re.sub('[,.!?":;()*]', '', txt)
     words = txt.split()
     for word in words:
       if not word in count:
